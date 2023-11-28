@@ -34,4 +34,13 @@ print("Common edge ---->", common_edge([1, 2, 3 ,4], [5, 6, 7, 8]))
 print("Common edge ---->", common_edge([1, 2, 3], [3, 4, 5]))
 print("Common edge ---->", common_edge([4, 5, 6], [7, 8, 9]))
 print("Common edge ---->", common_edge([-1, 0, 1, 2, -1], [2, 3, 4, 5]))
-print("Common edge ---->", common_edge([3, 3, 3], [3, 3, 3, ]))
+print("Common edge ---->", common_edge([3, 3, 3], [3, 3, 3, ])) 
+
+
+
+
+def all_the_same(list):
+    list = list.replace(" ", "")
+    n1, n2, n3 = int(list.split(","))
+
+print(all_the_same)
