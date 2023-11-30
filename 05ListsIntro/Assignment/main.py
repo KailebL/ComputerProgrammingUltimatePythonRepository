@@ -127,3 +127,57 @@ print("Mostly true ---->", mostly_true([False, False, False]))
 print("Mostly true ---->", mostly_true([True, True, True]))
 print("Mostly true ---->", mostly_true([False, True, False]))
 print("Mostly true ---->", mostly_true([True, False, False]))
+
+
+
+
+def make_copy(integers):
+    if len(integers) == 3:
+        return integers
+    else:
+        return "Must have 3 values"
+
+print("Make copy, 5, 6, 1 ---->", make_copy([5, 6, 1]))
+
+
+
+
+
+def repeat_thrice(integer):
+    # integer = list(integer)
+    integer = integer
+    integer = integer, integer, integer
+    return integer
+
+print("Repeat thrice, -1 ---->", repeat_thrice(-1))
+print("Repeat thrice, 5 ---->", repeat_thrice(5))
+
+
+
+
+
+
+def make_reversed_copy(listIntegers):
+    listIntegers = list(listIntegers)
+    copylist = listIntegers
+    first = listIntegers[0]
+    last = listIntegers[2]
+    copylist[0] = last
+    copylist[2] = first
+    return copylist
+
+print("Reversed copy, 1, 2, 3 ---->", make_reversed_copy([1, 2, 3]))
+print("Reversed copy, 1, 2, 3 ---->", make_reversed_copy([13, 5, 6]))
+
+
+
+
+def reverse_in_place(integers):
+    first = integers[0]
+    last = integers[2]
+    integers[2] = first
+    integers[0] = last
+    return integers
+
+print("reverse in place, 1, 2, 3 ---->", reverse_in_place([1, 2, 3]))
+print("reverse in place, 13, 5, 6 ---->", reverse_in_place([13, 5, 6]))
