@@ -145,9 +145,9 @@ print("Make copy, 5, 6, 1 ---->", make_copy([5, 6, 1]))
 
 def repeat_thrice(integer):
     # integer = list(integer)
-    integer = integer
-    integer = integer, integer, integer
-    return integer
+    # integer = []
+    # integer = integer, integer, integer
+    return [integer, integer, integer]
 
 print("Repeat thrice, -1 ---->", repeat_thrice(-1))
 print("Repeat thrice, 5 ---->", repeat_thrice(5))
