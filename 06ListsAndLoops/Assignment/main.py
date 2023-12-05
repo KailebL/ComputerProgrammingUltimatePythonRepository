@@ -143,39 +143,57 @@ def all_the_same(numbers):
 
 
 def increasing(integers):
+    count = 0
     lastNumber = 0
     if len(integers) < 2:
         return False
     else:
         for number in integers:
             if number > lastNumber:
-                return True
                 lastNumber = number
+                count = count + 1
             else:
                 return False
+    if count == len(integers):
+        return True
+    else:
+        return False
             
 
 
 
         
 def is_incrementing(numbers):
+    incrementCount = 0
     lastNumber = 0
     if len(numbers) == 0:
         return False
-            
+    
+    for number in numbers:
+        if number - lastNumber == 1:
+            incrementCount = incrementCount + 1
+            lastNumber = number
+    if incrementCount == len(numbers):
+        return True
+    else:
+        return False
+
 
 
 
 
 
 def has_adjacent_repeat(numbers):
-    numList = []
-    repeat = False
+    lastNumber = 0
+    hasRepeat = False
     if len(numbers) > 0:
         for number in numbers:
-            numList.extend(number)
-            if number in numList:
-                repeat = True
+            if number == lastNumber:
+                hasRepeat = True
+                lastNumber = number
+            elif lastNumber != number and hasRepeat != True:
+                lastNumber = number
+    return hasRepeat
 
 
 
