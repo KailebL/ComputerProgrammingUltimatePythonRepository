@@ -118,3 +118,76 @@ def has_vowel(lettersList):
             return False
     elif len(lettersList) == 0:
         return False
+    
+
+
+
+
+def all_the_same(numbers):
+    lastNum = 0
+    allsame = False
+    for number in numbers:
+        if number == lastNum:
+            allsame = True
+            lastNum = number
+        elif len(numbers) == 1:
+            allsame = True
+        else:
+            allsame = False
+            lastNum = number
+    return allsame
+
+    
+
+
+
+
+def increasing(integers):
+    lastNumber = 0
+    if len(integers) < 2:
+        return False
+    else:
+        for number in integers:
+            if number > lastNumber:
+                return True
+                lastNumber = number
+            else:
+                return False
+            
+
+
+
+        
+def is_incrementing(numbers):
+    lastNumber = 0
+    if len(numbers) == 0:
+        return False
+            
+
+
+
+
+
+def has_adjacent_repeat(numbers):
+    numList = []
+    repeat = False
+    if len(numbers) > 0:
+        for number in numbers:
+            numList.extend(number)
+            if number in numList:
+                repeat = True
+
+
+
+
+def sum_with_skips(integers):
+    ignore = False
+    sum = 0
+    for number in integers:
+        if number == -1 and ignore == False:
+            ignore = True
+        elif number == -1 and ignore == True:
+            ignore = False
+        elif ignore == False and number != -1:
+            sum = sum + number
+    return sum
