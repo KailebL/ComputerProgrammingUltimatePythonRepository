@@ -63,7 +63,7 @@ def in_alphabetical_order(word):
 
 
 
-def alternate_case(word):
+def alternating_case(word):
     returnString = ""
     upcase = False
     for letter in word:
@@ -71,7 +71,7 @@ def alternate_case(word):
             returnString = returnString + letter
             upcase = True
         elif upcase == True:
-            returnString = returnString + letter.upcase()
+            returnString = returnString + letter.upper()
             upcase = False
     return returnString
 
@@ -98,7 +98,7 @@ def to_camel_case(string):
         if letter == " ":
             lastSpace = True
         elif lastSpace == True:
-            returnString = returnString + letter.upcase()
+            returnString = returnString + letter.upper()
             lastSpace = False
         else:
             returnString = returnString + letter
@@ -131,6 +131,7 @@ def without_duplicates(integers):
             lastNum = number
         elif number != lastNum:
             returnList.append(number)
+            lastNum = number
     return returnList
 
 
