@@ -58,3 +58,90 @@ def in_alphabetical_order(word):
         return True
     else:
         return False
+    
+
+
+
+
+def alternate_case(word):
+    returnString = ""
+    upcase = False
+    for letter in word:
+        if upcase == False:
+            returnString = returnString + letter
+            upcase = True
+        elif upcase == True:
+            returnString = returnString + letter.upcase()
+            upcase = False
+    return returnString
+
+
+
+
+
+def remove_vowels(string):
+    returnString = ""
+    for letter in string:
+        if letter not in ["a", "e", "i", "o", "u"]:
+            returnString = returnString + letter
+    return returnString
+
+
+
+
+
+
+def to_camel_case(string):
+    returnString = ""
+    lastSpace = False
+    for letter in string:
+        if letter == " ":
+            lastSpace = True
+        elif lastSpace == True:
+            returnString = returnString + letter.upcase()
+            lastSpace = False
+        else:
+            returnString = returnString + letter
+    return returnString
+
+
+
+
+
+
+def to_snake_case(phrase):
+    returnString = ""
+    for letter in phrase:
+        if letter == " ":
+            returnString = returnString + "_"
+        else:
+            returnString = returnString + letter
+    return returnString
+
+
+
+
+
+
+def without_duplicates(integers):
+    returnList = []
+    lastNum = 0
+    for number in integers:
+        if number == lastNum:
+            lastNum = number
+        elif number != lastNum:
+            returnList.append(number)
+    return returnList
+
+
+
+
+
+def filter_valid_act_scores(integers):
+    returnList = []
+    for number in integers:
+        if number >= 1 and number <= 36:
+            returnList.append(number)
+        else:
+            pass
+    return returnList
