@@ -63,9 +63,9 @@ def in_alphabetical_order(word):
 
 
 
-def alternating_case(word):
+def alternate_case(word):
     returnString = ""
-    upcase = False
+    upcase = True
     for letter in word:
         if upcase == False:
             returnString = returnString + letter
